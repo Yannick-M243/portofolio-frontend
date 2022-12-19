@@ -35,6 +35,40 @@ h3 {
     padding: 20px;
 }
 
+.exit-box {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    color: $white;
+
+    .message-btn {
+        margin: 20px 0 0 20px;
+        border-radius: 0;
+        width: 35px;
+        height: 30px;
+    }
+    .message-btn:hover {
+        background-color: $white;
+        color: $primary;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+
+.message-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    font-size: 2.5em;
+    color: $white;
+}
+
 //This is the navigation bar style
 nav {
     .nav-container {
@@ -67,7 +101,7 @@ nav {
     }
 
     a:hover {
-        background-color: $white-opac;
+        background-color: $white;
         color: $primary;
         transition: 0.5s;
     }
@@ -92,9 +126,108 @@ nav {
         }
     }
     a:hover {
-        background-color: $white-opac;
+        background-color: $white;
         color: $primary;
         transition: 0.5s;
+    }
+}
+#contact-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: $primary-opac;
+    border-radius: 50%;
+    .message-btn:hover {
+        outline: 4px solid $primary;
+        background-color: $white;
+        color: $primary;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+
+#contact {
+    .success-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            padding: 30px;
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    h2 {
+        padding: 0;
+        font-size: 2rem;
+    }
+    height: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1em;
+    background-color: $primary-opac;
+    width: 30%;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        label {
+            color: $primary;
+        }
+        input {
+            background-color: $white-opac;
+            font-size: 1em;
+            width: 80%;
+            height: 40px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        textarea {
+            background-color: $white-opac;
+            margin: 20px 0;
+            font-size: 1.2em;
+            width: 80%;
+            min-height: 300px;
+            border-radius: 5px;
+            border: none;
+        }
+        input:focus, textarea:focus,input:hover, textarea:hover {
+            background-color: $white;
+            outline: $primary 2px solid;
+            transition: 0.3s;
+        }
+        .btn {
+            margin-top: 30px;
+            width: 50%;
+            text-align: center;
+            font-size: 1em;
+            border: 2px solid $primary;
+            border-radius: 8px;
+            color: $white;
+            height: 50px;
+            background-color: $primary;
+        }
+        .btn:hover {
+            cursor: pointer;
+            background-color: $white;
+            color: $primary;
+            transition: 0.5s;
+        }
     }
 }
 
@@ -249,47 +382,61 @@ nav {
         }
     }
 }
-#contact {
+
+#project {
     @include margin;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 1.4em;
-    .form-group {
+
+    .container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        label {
-            color: $primary;
-        }
-        input {
-            font-size: 1em;
-            width: 600px;
-            height: 40px;
-            margin: 20px 0;
-        }
-        textarea{
-            font-size: 1.2em;
-            width: 600px;
-            min-height: 300px;
-        }
-        .btn {
+        flex-flow: row wrap;
+        .repo-card {
             width: 300px;
-            text-align: center;
-            background-color: black;
-            font-size: 1em;
+            min-height: 200px;
+            border-radius: 10px;
+            margin: 10px;
             border: 2px solid $primary;
-            border-radius: 8px;
-            color: $primary;
-            height: 50px;
-            
+            //box-shadow: 10px 10px $primary-opac;
+            .heading-container {
+                h4 {
+                    padding: 6px;
+                    color: $primary;
+                }
+                padding: 5px;
+                display: flex;
+                justify-content: space-between;
+                .date {
+                    color: $white-opac;
+                }
+            }
+            .details-container {
+                font-size: 0.9em;
+                margin-top: 15px;
+                min-height: 136px;
+                padding: 5px;
+                .language {
+                    padding-top: 20px;
+                }
+            }
+            .card-footer {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                border-radius: 0 0 6px 6px;
+                height: 40px;
+                background-color: $primary;
+                span {
+                    color: $white-opac;
+                    padding: 15px;
+                }
+                span:hover {
+                    color: $white;
+                    transition: 0.6s;
+                }
+            }
         }
-        .btn:hover {
-            cursor: pointer;
-            background-color: $primary;
-            color: black;
-            transition: 0.8s;
+        .repo-card:hover {
+            box-shadow: 10px 10px $primary-opac;
+            transition: 0.4s;
         }
     }
 }
@@ -309,7 +456,7 @@ nav {
     display: flex;
     align-items: center;
     background: $primary-opac;
-    height: 120px;
+    height: 140px;
     .link-container {
         margin: 0 50px;
         display: flex;

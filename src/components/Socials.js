@@ -4,7 +4,7 @@ import { faFacebook, faInstagram, faGithub, faLinkedin } from '@fortawesome/free
 
 function Socials() {
   return (
-      <div class="social-media">
+      <div className="social-media">
           <ul>
               <li><a href="https://www.facebook.com/boteti" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
               </li>

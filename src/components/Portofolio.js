@@ -13,15 +13,14 @@ import Contact from './Contact'
 function Portofolio(){
   return (
       <div>
-          <Navbar />
           <Socials/>
           <Welcome/>
           <Skills />
           <Education />
           <Experience />
-          <Project />
+      <Project />
+      <Contact />
           <Details />
-          <Contact/>
           <Footer />
     </div>
   )

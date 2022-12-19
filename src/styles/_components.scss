@@ -27,3 +27,34 @@ $white-opac: rgba(255, 255, 255, 0.455);
 .primary-font {
     color: $primary;
 }
+
+.error{
+    color: red;
+}
+.success{
+    color: rgb(1, 165, 1);
+}
+.JavaScript{
+ color: rgb(240, 219, 79);
+}
+
+.Java{
+ color: rgb(248, 152, 32);
+}
+.PHP{
+color: rgb(137, 147, 190);
+}
+
+.HTML{
+    color:rgb(227, 76, 38)
+}
+
+.SCSS{
+    color:rgb(204, 102, 153) ;
+}
+.CSS{
+    color: rgb(38, 77, 228);
+}
+textarea {
+  resize: none;
+}
