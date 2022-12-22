@@ -1,29 +1,35 @@
 import React from 'react'
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState, useLayoutEffect } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-function ParticlesComponent() {
 
-    const [isMobile, setIsMobile] = useState(false)
-    const [size, setSize] = useState(window.innerWidth)
-
-    useEffect(() => {
+function useWindowSize() {
+    const [size, setSize] = useState(0);
+    useLayoutEffect(() => {
         function updateSize() {
-            setSize([window.innerWidth]);
+            setSize(window.innerWidth);
         }
         window.addEventListener('resize', updateSize);
         updateSize();
-        checkScreenSize()
+        return () => window.removeEventListener('resize', updateSize);
     }, []);
+    return size;
+}
 
-
-    const checkScreenSize = () => {
-        if (size < 540) { // If media query matches
-            setIsMobile(true);
-        }
+const checkDevice = (size) => {
+    let isMobile = false;
+    if (size < 540) {
+        isMobile =true;
+    } else {
+        isMobile=false;
     }
+    return isMobile;
+}
 
+function ParticlesComponent() {
+    const size  =useWindowSize();
+    const isMobile = checkDevice(size)
 
     const particlesInit = useCallback(async engine => {
         //console.log(engine);
@@ -36,6 +42,7 @@ function ParticlesComponent() {
     const particlesLoaded = useCallback(async container => {
         ///await console.log(container);
     }, []);
+
     if (isMobile) {
         return (
             <Particles

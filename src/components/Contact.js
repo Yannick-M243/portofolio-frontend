@@ -1,11 +1,37 @@
-import React, { useRef, useEffect, useState} from 'react';
+import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMessage, faRectangleXmark } from '@fortawesome/free-regular-svg-icons';
 import successIcon from '../images/success.png';
 import FadeLoader from "react-spinners/FadeLoader";
 
+function useWindowSize() {
+  const [size, setSize] = useState(0);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize(window.innerWidth);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+}
+
+const checkDevice = (size) => {
+  let isMobile = false;
+  if (size < 540) {
+    isMobile = true;
+  } else {
+    isMobile = false;
+  }
+  return isMobile;
+}
+
 function Contact() {
+  const size = useWindowSize();
+  const isMobile = checkDevice(size)
+
   const form = useRef();
 
   const [isShown, setIsShown] = useState(false);
@@ -14,28 +40,10 @@ function Contact() {
   const [message, setMessage] = useState(null);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState(null);
-  const [size, setSize] = useState(window.innerWidth)
 
   useEffect(() => {
     setError(null);
   }, [name, message, email])
-
-
-  useEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    checkScreenSize()
-  }, []);
-
-
-  const checkScreenSize = () => {
-    if (size < 540) { // If media query matches
-      setIsShown(true);
-    }
-  }
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -71,7 +79,7 @@ function Contact() {
     }
   }
 
-  if (isShown) {
+  if (isMobile) {
     return (
       <section id='contact'>
         <div className='exit-box'>
