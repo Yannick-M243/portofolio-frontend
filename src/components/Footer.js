@@ -4,7 +4,8 @@ import CV from '../docs/CV-Yannick-Boteti-Makwenge-2023.pdf';
 function Footer() {
   return (
       <section id="cta">
-          <a href="./docs/CV-Yannick-Boteti-Makwenge-2023.pdf" download={CV}
+          <p>Want more details?</p>
+          <a href={CV} download="CV-Yannick-Boteti-Makwenge-2023"
               target="_blank" rel="noreferrer">
               <div className='link-container'>Download my CV</div>
           </a>

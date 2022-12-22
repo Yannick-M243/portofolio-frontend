@@ -18,6 +18,7 @@ body {
     font-family: $font-family;
     background: black;
     color: $white;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -143,6 +144,7 @@ nav {
     bottom: 0;
     background: $primary-opac;
     border-radius: 50%;
+
     .message-btn:hover {
         outline: 4px solid $primary;
         background-color: $white;
@@ -174,6 +176,7 @@ nav {
     right: 0;
     bottom: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 1em;
@@ -186,7 +189,7 @@ nav {
         align-items: center;
         justify-content: center;
         label {
-            color: $primary;
+            color: $white;
         }
         input {
             background-color: $white-opac;
@@ -206,7 +209,10 @@ nav {
             border-radius: 5px;
             border: none;
         }
-        input:focus, textarea:focus,input:hover, textarea:hover {
+        input:focus,
+        textarea:focus,
+        input:hover,
+        textarea:hover {
             background-color: $white;
             outline: $primary 2px solid;
             transition: 0.3s;
@@ -233,7 +239,7 @@ nav {
 
 //This is the style for the whole welcome section
 #home {
-    margin: 180px 0;
+    @include margin;
     display: flex;
     justify-content: center;
 
@@ -253,7 +259,6 @@ nav {
         }
         .image-container {
             display: flex;
-
             justify-content: center;
             width: 40%;
             border-radius: 50%;
@@ -272,25 +277,39 @@ nav {
 #skills {
     @include margin;
     h3 {
+        text-align: center;
         color: $white-opac;
+        margin: 40px;
     }
 
     .container {
         display: flex;
+        justify-content: center;
         flex-flow: row wrap;
-        .skill-container {
-            margin: 20px;
-            border-left: 3px solid $primary;
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            ul {
-                padding: 30px;
-            }
-            h4 {
-                color: $primary;
-                padding: 10px;
-            }
+        width: 70%;
+
+        img {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+        }
+        .mongo {
+            height: 90px;
+            width: 200px;
+        }
+        .php {
+            width: 160px;
+        }
+        .express {
+            width: 140px;
+        }
+        .sass {
+            height: 90px;
+            width: 140px;
+        }
+        img:hover {
+            transform: scale(1.15);
+            transition: 0.6s;
         }
     }
 }
@@ -302,83 +321,95 @@ nav {
         color: $white;
         padding: 15px;
     }
+
     .container {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         color: $primary;
-        .education-cont {
-            transition: all ease-in 0.2s;
-            border-radius: 10px;
-            margin: 30px;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.148);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            span {
-                padding: 10px;
-            }
-        }
-        .education-cont:hover {
-            box-shadow: 0 10px 10px $primary-opac;
-            border: solid $primary-opac 1px;
-        }
-    }
-}
+        .left-container {
+            border-right: 5px solid $primary;
+            width: 45%;
 
-//This is the style for the whole experience section
-#experience {
-    @include margin;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 70%;
-        .exp-container {
-            transition: all ease-in 0.2s;
-            border-radius: 5px;
-            width: 100%;
-            margin: 30px 0;
-            background: $primary-opac;
-            display: flex;
-            justify-content: space-between;
-            .img-container {
-                width: 30%;
+            .education-cont {
+                transition: all ease-in 0.2s;
+                border-radius: 10px;
+                margin: 30px auto;
+                width: 75%;
+                height: 250px;
+                background: rgba(255, 255, 255, 0.148);
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
-                img {
+                justify-content: center;
+                span {
                     padding: 10px;
-                    height: 50px;
-                    width: 60%;
                 }
             }
-            .text-container {
-                padding: 20px;
-
-                ul {
-                    margin: 20px;
-                }
-                width: 70%;
-                span {
-                    color: $white-opac;
-                    padding: 10px;
-                }
-                p {
-                    font-style: italic;
-                }
+            .education-cont:hover {
+                box-shadow: 0 10px 10px $primary-opac;
+                border: solid $primary-opac 1px;
             }
         }
-        .exp-container:hover {
-            outline: 3px solid $white-opac;
+        .right-container {
+            border-left: 5px solid $primary;
+            width: 45%;
+
+            .exp-container {
+                transition: all ease-in 0.2s;
+                border-radius: 5px;
+                width: 75%;
+                margin: 30px auto;
+                background: $primary-opac;
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                align-items: center;
+
+                .img-container {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        padding: 10px;
+                        height: 50px;
+                        width: 200px;
+                    }
+                }
+                .text-container {
+                    padding: 10px;
+                    h4,
+                    p {
+                        color: $white;
+                        text-align: center;
+                    }
+                    ul {
+                        margin: 20px;
+                    }
+                    width: 90%;
+                    p {
+                        padding: 10px;
+                    }
+                    span {
+                        color: $white-opac;
+                        padding: 0 10px;
+                    }
+                    .date {
+                        color: $primary;
+                    }
+                    .tools {
+                        display: flex;
+                        flex-flow: row wrap;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+            .exp-container:hover {
+                box-shadow: 0 10px 10px $white-opac;
+                border: solid $white-opac 1px;
+            }
         }
     }
 }
@@ -386,6 +417,10 @@ nav {
 #project {
     @include margin;
 
+    .loader-container {
+        display: flex;
+        justify-content: center;
+    }
     .container {
         display: flex;
         flex-flow: row wrap;
@@ -454,9 +489,15 @@ nav {
 #cta {
     margin-top: 90px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: $primary-opac;
     height: 140px;
+    p {
+        font-size: 1.4rem;
+        padding-bottom: 25px;
+    }
     .link-container {
         margin: 0 50px;
         display: flex;
@@ -485,6 +526,23 @@ nav {
     .container {
         align-items: center;
         width: 100% !important;
+    }
+
+    #contact {
+        width: 40% !important;
+    }
+    #education {
+        .container {
+            flex-direction: column !important;
+            .left-container {
+                border-right: none;
+                width: 100% !important;
+            }
+            .right-container {
+                border-left: none;
+                width: 100% !important;
+            }
+        }
     }
     #home {
         .container {
@@ -548,6 +606,45 @@ nav {
 
 //changing element attributes for screen smaller than 540px to enable responsiveness
 @media screen and (max-width: 540px) {
+    #project {
+        margin: 0 auto !important;
+        .container {
+            margin: 0 auto !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+        }
+    }
+    #skills{
+        
+        img {
+            margin: 10px !important;
+            width: 60px !important;
+            height: 60px !important;
+        }
+        .mongo {
+            height: 50px !important;
+            width: 160px!important;
+        }
+        .php {
+            width: 120px!important;
+        }
+        .express {
+            width: 100px !important;
+        }
+        .sass {
+            height: 50px !important;
+            width: 100px !important;
+        }
+    }
+    #contact {
+        position: relative !important;
+        background: transparent !important;
+        width: 90% !important;
+        .exit-box {
+            visibility: hidden !important;
+        }
+        margin: 0 auto !important;
+    }
     .navbar {
         height: 45px !important;
         margin: 5px !important;

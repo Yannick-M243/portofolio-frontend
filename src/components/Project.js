@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 
 function Project() {
-  const [isLoaded, setIsLoaded] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState("");
   const [repos, setRepos] = useState({});
 
@@ -16,7 +16,7 @@ function Project() {
         (result) => {
           setRepos(result);
           setIsLoaded(true);
-          console.log(result);
+          //console.log(result);
         },
         (error) => {
           setIsLoaded(true);
@@ -49,7 +49,7 @@ function Project() {
   }
 
   useEffect(() => {
-    //searchRepositories();
+    searchRepositories();
   }, []);
 
   //making sure the information have been retrieved before displaying them
@@ -72,13 +72,13 @@ function Project() {
           </div>
         </section>
       )
-    } else {/*
+    } else {
       return (
         <section id="project">
           <h2>Projects</h2>
           <div className='container'>
             {repos.map(repo => (
-              <div className='repo-card' key={repo.id}>
+              <div className='repo-card' key={repo.id} data-aos="zoom-in">
                 <div className='heading-container'>
                   <h4>{repo.name}</h4>
                   <span className='date'>{changeDateFormat(repo.created_at, 'dd/MM/yyyy')}</span>
@@ -86,7 +86,7 @@ function Project() {
                 <div className='details-container'>
                   {repo.description !== null ? <p>{repo.description}</p> : ''}
                   <p className={"language " + repo.language}>{repo.language}</p>
-                  {/*repo.updated_at}
+                  {/*repo.updated_at*/}
                 </div>
                 <div className='card-footer'>
                   <a href={repo.html_url} target="_blank" rel="noreferrer">
@@ -97,7 +97,8 @@ function Project() {
             ))}
           </div>
         </section>
-      );*/
+      );/*
+      
       return (
         <section id="project">
           <h2>Projects</h2>
@@ -119,13 +120,13 @@ function Project() {
                 </div>
           </div>
         </section>
-      );
+      );*/
     }
   } else {
     return (
       <section id="project">
         <h2>Projects</h2>
-        <div className='container'>
+        <div className='loader-container'>
           <FadeLoader color="rgba(30, 143, 255, 0.478)" />
         </div>
       </section>

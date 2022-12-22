@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMessage, faRectangleXmark } from '@fortawesome/free-regular-svg-icons';
@@ -14,10 +14,28 @@ function Contact() {
   const [message, setMessage] = useState(null);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState(null);
+  const [size, setSize] = useState(window.innerWidth)
 
   useEffect(() => {
     setError(null);
   }, [name, message, email])
+
+
+  useEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    checkScreenSize()
+  }, []);
+
+
+  const checkScreenSize = () => {
+    if (size < 540) { // If media query matches
+      setIsShown(true);
+    }
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();

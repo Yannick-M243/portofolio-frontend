@@ -1,70 +1,42 @@
 import React from 'react'
+import cssLogo from '../images/css.png';
+import htmlLogo from '../images/html.png';
+import sassLogo from '../images/sass.png';
+import figmaLogo from '../images/figma.png';
+import laravelLogo from '../images/laravel.png';
+import expressLogo from '../images/express.png';
+import javascriptLogo from '../images/javascript.png';
+import javaLogo from '../images/java.png';
+import mongoLogo from '../images/mongo.png';
+import mysqlLogo from '../images/mysql.png';
+import phpLogo from '../images/php.png';
+import reactLogo from '../images/react.png';
+import nodeLogo from '../images/node.png';
+import sqlLogo from '../images/sql.png';
 
 function Skills() {
     return (
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>skills</h2>
+            <h3>This are all the technologies I can work with</h3>
             <div className='container'>
-                <h3>Soft Skills</h3>
-            </div>
-
-            <div className='container'>
-                <div className='skill-container'>
-                    <h4> General</h4>
-                    <ul>
-                        <li>Effective Time Management</li>
-                        <li>Microsoft Office Suite</li>
-                        <li>Fast Learner</li>
-                        <li>Ability to work in Team</li>
-                        <li>Computer skills</li>
-                    </ul>
-                </div>
-                <div className='skill-container'>
-                    <h4>Languages</h4>
-                    <ul>
-                        <li>French</li>
-                        <li>English</li>
-                        <li>Lingala</li>
-                    </ul>
-                </div>
-            </div>
-            <div className='container'>
-                <h3>Hard Skills</h3>
-            </div>
-
-            <div className='container'>
-                <div className='skill-container'>
-                    <h4>General</h4>
-                    <ul>
-                        <li>Fontend Development</li>
-                        <li>Backend Development</li>
-                        <li>Agile Software Development</li>
-                        <li>Database Design & Management</li>
-                        <li>Information Systems</li>
-                    </ul>
-                </div>
-                <div className='skill-container'>
-                    <h4>Programming Languages</h4>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS/SCSS</li>
-                        <li>Javascript</li>
-                        <li>Java</li>
-                        <li>PHP</li>
-                    </ul>
-                </div>
-                <div className='skill-container'>
-                    <h4>Database </h4>
-                    <ul>
-                        <li>MySQL Workbench</li>
-                        <li>XAMPP</li>
-                        <li>NoSQL</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
+                <img src={cssLogo} alt="css" data-aos="flip-left"></img>
+                <img src={sassLogo} alt="sass" className='sass' data-aos="flip-left"></img>
+                <img src={htmlLogo} alt="html" data-aos="flip-left"></img>
+                <img src={figmaLogo} alt="figma" data-aos="flip-left"></img>
+                <img src={laravelLogo} alt="laravel" data-aos="flip-left"></img>
+                <img src={expressLogo} alt="express" data-aos="flip-left" className='express'></img>
+                <img src={javaLogo} alt="java" data-aos="flip-left"></img>
+                <img src={javascriptLogo} alt="javascript" data-aos="flip-left"></img>
+                <img src={mongoLogo} alt="mongo" className='mongo' data-aos="flip-left"></img>
+                <img src={mysqlLogo} alt="mysql" data-aos="flip-left"></img>
+                <img src={phpLogo} alt="php" className='php' data-aos="flip-left"></img>
+                <img src={reactLogo} alt="react" data-aos="flip-left"></img>
+                <img src={nodeLogo} alt="node" data-aos="flip-left"></img>
+                <img src={sqlLogo} alt="node" data-aos="flip-left"></img>
             </div>
         </section>
     );
 }
 
-export default Skills
+export default Skills;
