@@ -79,7 +79,7 @@ function Contact() {
     }
   }
 
-  if (isMobile) {
+  if (isMobile || isShown) {
     return (
       <section id='contact'>
         <div className='exit-box'>
