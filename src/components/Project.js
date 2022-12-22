@@ -10,7 +10,7 @@ function Project() {
 
   //this function is used to retrieve information about the user's github repositories
   const searchRepositories = () => {
-    fetch(proccess.env.REACT_APP_API_URL)
+    fetch(process.env.REACT_APP_API_URL)
       .then(res => res.json())
       .then(
         (result) => {
