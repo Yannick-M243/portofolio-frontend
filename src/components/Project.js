@@ -17,7 +17,7 @@ function Project() {
         (result) => {
           setRepos(result);
           setIsLoaded(true);
-          console.log(result);
+          //console.log(result);
         },
         (error) => {
           setIsLoaded(true);
@@ -56,7 +56,7 @@ function Project() {
   //making sure the information have been retrieved before displaying them
   if (isLoaded) {
     let result = repos.message.includes("limit exceeded");
-    console.log(result);
+    
     if (error === null && result === false) {
       //Display a Not found error in case there is no repositories found
       if (repos.message === "Not Found" || repos.length === 0) {
