@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 
 function Project() {
+
   const [isLoaded, setIsLoaded] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(null);
   const [repos, setRepos] = useState({});
 
   //this function is used to retrieve information about the user's github repositories
@@ -16,7 +17,7 @@ function Project() {
         (result) => {
           setRepos(result);
           setIsLoaded(true);
-          //console.log(result);
+          console.log(result);
         },
         (error) => {
           setIsLoaded(true);
@@ -54,50 +55,44 @@ function Project() {
 
   //making sure the information have been retrieved before displaying them
   if (isLoaded) {
-    //Display a Not found error in case there is no repositories found
-    if (repos.message === "Not Found" || repos.length === 0) {
-      return (
-        <section id="project">
-          <div className='container'>
-            <p>No repositories found</p>
-          </div>
-        </section>
-      )
-    } else if (error !== "") {
-      return (
-        <section id="project">
-          <div className='container'>
-            <p>There was an errror retrieving repositories :</p>
-            <p>{error}</p>
-          </div>
-        </section>
-      )
-    } else {
-      return (
-        <section id="project">
-          <h2>Projects</h2>
-          <div className='container'>
-            {repos.map(repo => (
-              <div className='repo-card' key={repo.id} data-aos="zoom-in">
-                <div className='heading-container'>
-                  <h4>{repo.name}</h4>
-                  <span className='date'>{changeDateFormat(repo.created_at, 'dd/MM/yyyy')}</span>
+    let result = repos.message.includes("limit exceeded");
+    console.log(result);
+    if (error === null && result === false) {
+      //Display a Not found error in case there is no repositories found
+      if (repos.message === "Not Found" || repos.length === 0) {
+        return (
+          <section id="project">
+            <div className='container'>
+              <p>No repositories found</p>
+            </div>
+          </section>
+        )
+      } else {
+        return (
+          <section id="project">
+            <h2>Projects</h2>
+            <div className='container'>
+              {repos.map(repo => (
+                <div className='repo-card' key={repo.id} data-aos="zoom-in">
+                  <div className='heading-container'>
+                    <h4>{repo.name}</h4>
+                    <span className='date'>{changeDateFormat(repo.created_at, 'dd/MM/yyyy')}</span>
+                  </div>
+                  <div className='details-container'>
+                    {repo.description !== null ? <p>{repo.description}</p> : ''}
+                    <p className={"language " + repo.language}>{repo.language}</p>
+                    {/*repo.updated_at*/}
+                  </div>
+                  <div className='card-footer'>
+                    <a href={repo.html_url} target="_blank" rel="noreferrer">
+                      <span><FontAwesomeIcon icon={faLink} /></span>
+                    </a>
+                  </div>
                 </div>
-                <div className='details-container'>
-                  {repo.description !== null ? <p>{repo.description}</p> : ''}
-                  <p className={"language " + repo.language}>{repo.language}</p>
-                  {/*repo.updated_at*/}
-                </div>
-                <div className='card-footer'>
-                  <a href={repo.html_url} target="_blank" rel="noreferrer">
-                    <span><FontAwesomeIcon icon={faLink} /></span>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      );/*
+              ))}
+            </div>
+          </section>
+        );/*
       
       return (
         <section id="project">
@@ -121,6 +116,17 @@ function Project() {
           </div>
         </section>
       );*/
+      }
+    } else {
+      return (
+        <section id="project">
+          <h2>Projects</h2>
+          <div className='container'>
+            <p className='error pj-error'>There was an error retrieving repositories </p>
+            <p>{error}</p>
+          </div>
+        </section>
+      )
     }
   } else {
     return (

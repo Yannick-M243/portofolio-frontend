@@ -17,7 +17,7 @@ import sqlLogo from '../images/sql.png';
 function Skills() {
     return (
         <section id="skills">
-            <h2>skills</h2>
+            <h2>Skills</h2>
             <h3>This are all the technologies I can work with</h3>
             <div className='container'>
                 <img src={cssLogo} alt="css" data-aos="flip-left"></img>

@@ -87,37 +87,39 @@ function Contact() {
             <span><FontAwesomeIcon icon={faRectangleXmark} /></span>
           </button>
         </div>
-        <h2>Leave me a message</h2>
-        {error !== null ? <p className='error'>{error}</p> : ''}
-        {status === null ? <div className='container'>
-          <form ref={form} onSubmit={sendEmail}>
-            <div className='form-group'>
-              <label htmlFor='name'>Name</label>
-              <input type="text" name="name" onChange={(e) => setName(e.target.value)} />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='email'>Email</label>
-              <input type="email" name="email" onChange={(e) => setEmail(e.target.value)} />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='message'>Message</label>
-              <textarea name="message" onChange={(e) => setMessage(e.target.value)} />
-            </div>
-            <div className='form-group'>
-              <input type="submit" value="Send Message" className='btn' />
-            </div>
-          </form>
-        </div> :
-          <div className='success-container'>
-            {status === "success" ?
-              <div className='success-container'>
-                <p className='success'>Your Message was successfully sent!</p>
-                <img src={successIcon} alt="success"></img>
-              </div> :
-              <div className='success-container'>
-                <FadeLoader color="white" />
-              </div>}
-          </div>}
+        <div className='container'>
+          <h2>Leave me a message</h2>
+          {error !== null ? <p className='error'>{error}</p> : ''}
+          {status === null ? <div className='container'>
+            <form ref={form} onSubmit={sendEmail}>
+              <div className='form-group'>
+                <label htmlFor='name'>Name</label>
+                <input type="text" name="name" onChange={(e) => setName(e.target.value)} />
+              </div>
+              <div className='form-group'>
+                <label htmlFor='email'>Email</label>
+                <input type="email" name="email" onChange={(e) => setEmail(e.target.value)} />
+              </div>
+              <div className='form-group'>
+                <label htmlFor='message'>Message</label>
+                <textarea name="message" onChange={(e) => setMessage(e.target.value)} />
+              </div>
+              <div className='form-group'>
+                <input type="submit" value="Send Message" className='btn' />
+              </div>
+            </form>
+          </div> :
+            <div className='success-container'>
+              {status === "success" ?
+                <div className='success-container'>
+                  <p className='success'>Your Message was successfully sent!</p>
+                  <img src={successIcon} alt="success"></img>
+                </div> :
+                <div className='success-container'>
+                  <FadeLoader color="white" />
+                </div>}
+            </div>}
+        </div>
       </section>
     )
   } else {

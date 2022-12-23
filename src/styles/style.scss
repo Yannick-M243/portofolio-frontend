@@ -155,11 +155,17 @@ nav {
 }
 
 #contact {
+
+    .container{
+        margin: 0 auto;
+        width: 90%;
+    }
     .success-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         img {
             padding: 30px;
             width: 60px;
@@ -175,10 +181,6 @@ nav {
     position: fixed;
     right: 0;
     bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     font-size: 1em;
     background-color: $primary-opac;
     width: 30%;
@@ -420,6 +422,10 @@ nav {
     .loader-container {
         display: flex;
         justify-content: center;
+    }
+    .pj-error{
+        margin: 0 auto;
+        font-size: 1.5rem;
     }
     .container {
         display: flex;
