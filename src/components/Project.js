@@ -55,9 +55,7 @@ function Project() {
 
   //making sure the information have been retrieved before displaying them
   if (isLoaded) {
-    let result = repos.message.includes("limit exceeded");
-    
-    if (error === null && result === false) {
+    if (error === null) {
       //Display a Not found error in case there is no repositories found
       if (repos.message === "Not Found" || repos.length === 0) {
         return (
