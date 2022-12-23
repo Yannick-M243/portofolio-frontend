@@ -24,7 +24,7 @@ function Skills() {
         return (
             <section id="skills">
                 <h2>Skills</h2>
-                <h3>This are all the technologies I can work with</h3>
+                <h3>These are all the technologies I can work with</h3>
                 <div className='container'>
                     <img src={cssLogo} alt="css" data-aos="zoom-out"></img>
                     <img src={sassLogo} alt="sass" className='sass' data-aos="zoom-out"></img>
