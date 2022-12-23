@@ -3,12 +3,15 @@ import CV from '../docs/CV-Yannick-Boteti-Makwenge-2023.pdf';
 
 function Footer() {
   return (
-      <section id="cta">
+      <section id="footer">
           <p>Want more details?</p>
           <a href={CV} download="CV-Yannick-Boteti-Makwenge-2023"
               target="_blank" rel="noreferrer">
               <div className='link-container'>Download my CV</div>
           </a>
+          <div className='outer-footer'>
+              <span className='copyright'>&copy;2022 Copyright <a href="https://github.com/Yannick-M243" target="_blank" rel="noreferrer">Yannick Makwenge.</a></span>
+          </div>
       </section>
   )
 }

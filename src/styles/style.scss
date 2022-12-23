@@ -155,8 +155,7 @@ nav {
 }
 
 #contact {
-
-    .container{
+    .container {
         margin: 0 auto;
         width: 90%;
     }
@@ -338,7 +337,7 @@ nav {
                 border-radius: 10px;
                 margin: 30px auto;
                 width: 75%;
-                height: 250px;
+                min-height: 250px;
                 background: rgba(255, 255, 255, 0.148);
                 display: flex;
                 flex-direction: column;
@@ -423,7 +422,7 @@ nav {
         display: flex;
         justify-content: center;
     }
-    .pj-error{
+    .pj-error {
         margin: 0 auto;
         font-size: 1.5rem;
     }
@@ -492,20 +491,21 @@ nav {
         padding: 20px;
     }
 }
-#cta {
+#footer {
     margin-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: $primary-opac;
-    height: 140px;
+    height: 200px;
+    padding: 0;
     p {
         font-size: 1.4rem;
         padding-bottom: 25px;
     }
     .link-container {
-        margin: 0 50px;
+        margin-bottom: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -524,6 +524,23 @@ nav {
     .link-container:hover {
         background: $white;
         color: $primary;
+    }
+    .outer-footer {
+        text-align: center;
+        width: 100%;
+        .copyright {
+            
+            font-size: 1em;
+            color: $white;
+            a {
+                font-size: 1em;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+        padding-top: 20px;
+        padding-bottom: 10px;
     }
 }
 
@@ -620,8 +637,7 @@ nav {
             justify-content: center !important;
         }
     }
-    #skills{
-        
+    #skills {
         img {
             margin: 10px !important;
             width: 60px !important;
@@ -629,10 +645,10 @@ nav {
         }
         .mongo {
             height: 50px !important;
-            width: 160px!important;
+            width: 160px !important;
         }
         .php {
-            width: 120px!important;
+            width: 120px !important;
         }
         .express {
             width: 100px !important;

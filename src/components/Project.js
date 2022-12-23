@@ -55,7 +55,7 @@ function Project() {
 
   //making sure the information have been retrieved before displaying them
   if (isLoaded) {
-    if (error === null) {
+    if (error === null && repos.message=== undefined) {
       //Display a Not found error in case there is no repositories found
       if (repos.message === "Not Found" || repos.length === 0) {
         return (
@@ -121,7 +121,6 @@ function Project() {
           <h2>Projects</h2>
           <div className='container'>
             <p className='error pj-error'>There was an error retrieving repositories </p>
-            <p>{error}</p>
           </div>
         </section>
       )
