@@ -1,32 +1,11 @@
-import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
+import React, { useRef, useEffect, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMessage, faRectangleXmark } from '@fortawesome/free-regular-svg-icons';
 import successIcon from '../images/success.png';
 import FadeLoader from "react-spinners/FadeLoader";
-
-function useWindowSize() {
-  const [size, setSize] = useState(0);
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize(window.innerWidth);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
-}
-
-const checkDevice = (size) => {
-  let isMobile = false;
-  if (size < 540) {
-    isMobile = true;
-  } else {
-    isMobile = false;
-  }
-  return isMobile;
-}
+import useWindowSize from './useWindowSize'
+import checkDevice from './checkDevice' 
 
 function Contact() {
   const size = useWindowSize();

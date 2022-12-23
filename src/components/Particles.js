@@ -1,31 +1,9 @@
 import React from 'react'
-import { useCallback, useState, useLayoutEffect } from "react";
+import { useCallback} from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-
-
-function useWindowSize() {
-    const [size, setSize] = useState(0);
-    useLayoutEffect(() => {
-        function updateSize() {
-            setSize(window.innerWidth);
-        }
-        window.addEventListener('resize', updateSize);
-        updateSize();
-        return () => window.removeEventListener('resize', updateSize);
-    }, []);
-    return size;
-}
-
-const checkDevice = (size) => {
-    let isMobile = false;
-    if (size < 540) {
-        isMobile =true;
-    } else {
-        isMobile=false;
-    }
-    return isMobile;
-}
+import useWindowSize from './useWindowSize'
+import checkDevice from './checkDevice' 
 
 function ParticlesComponent() {
     const size  =useWindowSize();

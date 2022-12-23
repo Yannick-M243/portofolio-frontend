@@ -13,30 +13,60 @@ import phpLogo from '../images/php.png';
 import reactLogo from '../images/react.png';
 import nodeLogo from '../images/node.png';
 import sqlLogo from '../images/sql.png';
+import useWindowSize from './useWindowSize'
+import checkDevice from './checkDevice'
 
 function Skills() {
-    return (
-        <section id="skills">
-            <h2>Skills</h2>
-            <h3>This are all the technologies I can work with</h3>
-            <div className='container'>
-                <img src={cssLogo} alt="css" data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={sassLogo} alt="sass" className='sass' data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={htmlLogo} alt="html" data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={figmaLogo} alt="figma" data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={laravelLogo} alt="laravel" data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={expressLogo} alt="express" data-aos="flip-left" className='express' data-aos-disable='mobile'></img>
-                <img src={javaLogo} alt="java" data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={javascriptLogo} alt="javascript" data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={mongoLogo} alt="mongo" className='mongo' data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={mysqlLogo} alt="mysql" data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={phpLogo} alt="php" className='php' data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={reactLogo} alt="react" data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={nodeLogo} alt="node" data-aos="flip-left" data-aos-disable='mobile'></img>
-                <img src={sqlLogo} alt="node" data-aos="flip-left" data-aos-disable='mobile'></img>
-            </div>
-        </section>
-    );
+    const size = useWindowSize();
+    const isMobile = checkDevice(size)
+
+    if (isMobile) {
+        return (
+            <section id="skills">
+                <h2>Skills</h2>
+                <h3>This are all the technologies I can work with</h3>
+                <div className='container'>
+                    <img src={cssLogo} alt="css" data-aos="zoom-out"></img>
+                    <img src={sassLogo} alt="sass" className='sass' data-aos="zoom-out"></img>
+                    <img src={htmlLogo} alt="html" data-aos="zoom-out" ></img>
+                    <img src={figmaLogo} alt="figma" data-aos="zoom-out"></img>
+                    <img src={laravelLogo} alt="laravel" data-aos="zoom-out"></img>
+                    <img src={expressLogo} alt="express" data-aos="zoom-out"></img>
+                    <img src={javaLogo} alt="java" data-aos="zoom-out"></img>
+                    <img src={javascriptLogo} alt="javascript" data-aos="zoom-out"></img>
+                    <img src={mongoLogo} alt="mongo" className='mongo' data-aos="zoom-out"></img>
+                    <img src={mysqlLogo} alt="mysql" data-aos="zoom-out"></img>
+                    <img src={phpLogo} alt="php" className='php' data-aos="zoom-out"></img>
+                    <img src={reactLogo} alt="react" data-aos="zoom-out"></img>
+                    <img src={nodeLogo} alt="node" data-aos="zoom-out"></img>
+                    <img src={sqlLogo} alt="node" data-aos="zoom-out"></img>
+                </div>
+            </section>
+        );
+    } else {
+        return (
+            <section id="skills">
+                <h2>Skills</h2>
+                <h3>This are all the technologies I can work with</h3>
+                <div className='container'>
+                    <img src={cssLogo} alt="css" data-aos="flip-left"></img>
+                    <img src={sassLogo} alt="sass" className='sass' data-aos="flip-left"></img>
+                    <img src={htmlLogo} alt="html" data-aos="flip-left" ></img>
+                    <img src={figmaLogo} alt="figma" data-aos="flip-left"></img>
+                    <img src={laravelLogo} alt="laravel" data-aos="flip-left"></img>
+                    <img src={expressLogo} alt="express" data-aos="flip-left"></img>
+                    <img src={javaLogo} alt="java" data-aos="flip-left"></img>
+                    <img src={javascriptLogo} alt="javascript" data-aos="flip-left"></img>
+                    <img src={mongoLogo} alt="mongo" className='mongo' data-aos="flip-left"></img>
+                    <img src={mysqlLogo} alt="mysql" data-aos="flip-left"></img>
+                    <img src={phpLogo} alt="php" className='php' data-aos="flip-left"></img>
+                    <img src={reactLogo} alt="react" data-aos="flip-left"></img>
+                    <img src={nodeLogo} alt="node" data-aos="flip-left"></img>
+                    <img src={sqlLogo} alt="node" data-aos="flip-left"></img>
+                </div>
+            </section>
+        );
+    }
 }
 
 export default Skills;
