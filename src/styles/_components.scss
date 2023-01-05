@@ -11,6 +11,11 @@
     margin: 250px 0;
 }
 
+@mixin mobile-margin {
+    margin: 100px 0;
+}
+
+
 //fonts-family
 $font-family: "Roboto Mono", monospace;
 

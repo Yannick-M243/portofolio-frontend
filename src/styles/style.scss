@@ -429,6 +429,7 @@ nav {
     .container {
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
         .repo-card {
             width: 300px;
             min-height: 200px;
@@ -487,9 +488,12 @@ nav {
     font-size: 1.2em;
     width: 80%;
     margin: 0 auto;
+    
     p {
+        text-align: center;
         padding: 20px;
     }
+
 }
 #footer {
     margin-top: 90px;
@@ -630,6 +634,7 @@ nav {
 //changing element attributes for screen smaller than 540px to enable responsiveness
 @media screen and (max-width: 540px) {
     #project {
+         @include mobile-margin ;
         margin: 0 auto !important;
         .container {
             margin: 0 auto !important;
@@ -638,6 +643,7 @@ nav {
         }
     }
     #skills {
+         @include mobile-margin ;
         img {
             margin: 10px !important;
             width: 60px !important;
@@ -659,6 +665,7 @@ nav {
         }
     }
     #contact {
+         @include mobile-margin;
         position: relative !important;
         background: transparent !important;
         width: 90% !important;
@@ -680,9 +687,13 @@ nav {
         font-size: 0.9em !important;
     }
     #home {
+        @include mobile-margin ;
         img {
             width: 270px !important;
             height: 270px !important;
         }
+    }
+    #details,#education,#contact{
+         @include mobile-margin ;
     }
 }
