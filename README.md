@@ -32,7 +32,7 @@ This project was built using:
     npm install
     ```
 ## Notice
-This is only the frontend part of the project, to see the backend part click on t efollowing link: [https://github.com/Yannick-M243/portofolio-backend](https://github.com/Yannick-M243/portofolio-backend).
+This is only the frontend part of the project, to see the backend part click on the following link: [https://github.com/Yannick-M243/portofolio-backend](https://github.com/Yannick-M243/portofolio-backend).
 
 ## Contributor & Contact
 
