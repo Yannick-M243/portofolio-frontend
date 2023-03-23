@@ -697,3 +697,12 @@ nav {
          @include mobile-margin;
     }
 }
+//setting bigger margin for bigger screen
+@media screen and (min-height: 1000px) {
+    #home,#skills,#education{
+        margin: 350px 0;
+    }
+    #details{
+        margin-top: 350px;
+    }
+}
