@@ -240,10 +240,7 @@ nav {
 
 //This is the style for the whole welcome section
 #home {
-    @include margin;
-    display: flex;
-    justify-content: center;
-
+    @include section-css;
     .container {
         display: flex;
         justify-content: space-around;
@@ -277,11 +274,12 @@ nav {
 
 //This is the style for the whole skills section
 #skills {
-    @include margin;
+    @include section-css;
+    flex-direction: column;
     h3 {
         text-align: center;
         color: $white-opac;
-        margin: 40px;
+        margin: 20px;
     }
 
     .container {
@@ -292,23 +290,10 @@ nav {
 
         img {
             margin: 10px;
-            width: 100px;
-            height: 100px;
-        }
-        .mongo {
+            width: auto;
             height: 90px;
-            width: 200px;
         }
-        .php {
-            width: 160px;
-        }
-        .express {
-            width: 140px;
-        }
-        .sass {
-            height: 90px;
-            width: 140px;
-        }
+
         img:hover {
             transform: scale(1.15);
             transition: 0.6s;
@@ -489,12 +474,11 @@ nav {
     font-size: 1.2em;
     width: 80%;
     margin: 0 auto;
-    
+
     p {
         text-align: center;
         padding: 20px;
     }
-
 }
 #footer {
     margin-top: 90px;
@@ -534,7 +518,6 @@ nav {
         text-align: center;
         width: 100%;
         .copyright {
-            
             font-size: 1em;
             color: $white;
             a {
@@ -603,6 +586,8 @@ nav {
         justify-content: center;
     }
     .social-media {
+        margin-top: 80px;
+        padding: 12px 0;
         ul {
             display: flex !important;
             flex-direction: row !important;
@@ -630,12 +615,15 @@ nav {
             height: 30% !important;
         }
     }
+    #footer {
+        margin-top: 0;
+    }
 }
 
 //changing element attributes for screen smaller than 540px to enable responsiveness
 @media screen and (max-width: 540px) {
     #project {
-         @include mobile-margin ;
+        @include mobile-margin;
         margin: 0 auto !important;
         .container {
             margin: 0 auto !important;
@@ -644,29 +632,15 @@ nav {
         }
     }
     #skills {
-         @include mobile-margin ;
+        @include mobile-margin;
         img {
             margin: 10px !important;
-            width: 60px !important;
-            height: 60px !important;
-        }
-        .mongo {
-            height: 50px !important;
-            width: 160px !important;
-        }
-        .php {
-            width: 120px !important;
-        }
-        .express {
-            width: 100px !important;
-        }
-        .sass {
-            height: 50px !important;
-            width: 100px !important;
+            width: auto !important;
+            height: 55px !important;
         }
     }
     #contact {
-         @include mobile-margin;
+        @include mobile-margin;
         position: relative !important;
         background: transparent !important;
         width: 90% !important;
@@ -688,22 +662,14 @@ nav {
         font-size: 0.9em !important;
     }
     #home {
-        @include mobile-margin ;
         img {
             width: 270px !important;
             height: 270px !important;
         }
     }
-    #details,#education,#contact{
-         @include mobile-margin;
-    }
-}
-//setting bigger margin for bigger screen
-@media screen and (min-height: 1000px) {
-    #home,#skills,#education{
-        margin: 350px 0;
-    }
-    #details{
-        margin-top: 350px;
+    #details,
+    #education,
+    #contact {
+        @include mobile-margin;
     }
 }
