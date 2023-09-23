@@ -1,6 +1,7 @@
 import React from 'react';
 import ceLogo from '../images/ce-logo.png';
 import kdaLogo from '../images/kda-logo.webp';
+import babuLogo from '../images/babu-text-logo.png'
 
 function Education() {
     return (
@@ -44,17 +45,19 @@ function Education() {
                             <img className='ce-logo' src={ceLogo} alt="congo-equiment logo" />
                         </div>
                         <div className='text-container'>
-                            <h4>Junior developer intern</h4>
+                            <h4>Developer Intern</h4>
                             <p>Lubumbashi DR Congo</p>
-                            <p className='date'> Feb 2022 - Mar 2022</p>
+                            <p className='date'> Feb 2022 - April 2022</p>
                             <div className='tools'>
                                 <span>ASP.NET MVC</span>
                                 <span>C#</span>
+                                <span>JavaScript</span>
                                 <span>HTML/CSS</span>
                                 <span>BootStrap</span>
                                 <span>SQL</span>
                                 <span>Microsoft SQL Server</span>
                                 <span>VB6</span>
+                                <span>JQuery</span>
                             </div>
                         </div>
                     </div>
@@ -63,15 +66,33 @@ function Education() {
                             < img className='kda-logo logo' src={kdaLogo} alt="kda logo" />
                         </div>
                         <div className='text-container'>
-                            <h4>Junior developer intern</h4>
+                            <h4>Developer Intern</h4>
                             <p>Kinshasa DR Congo</p>
-                            <p className='date'>April 2022</p>
+                            <p className='date'>April 2022 - May 2022</p>
                             <div className='tools'>
                                 <span>Laravel</span>
                                 <span>PHP</span>
+                                <span>JavaScript</span>
                                 <span>HTML/CSS/SCSS</span>
                                 <span>Bootstrap</span>
                                 <span>FIGMA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='exp-container' data-aos="fade-left">
+                        <div className='img-container'>
+                            < img className='kda-logo logo' src={babuLogo} alt="babu logo" />
+                        </div>
+                        <div className='text-container'>
+                            <h4>Junior Front-end Developer</h4>
+                            <p>Cape Town South Africa</p>
+                            <p className='date'>April 2023 - September 2023</p>
+                            <div className='tools'>
+                                <span>Cordova</span>
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>Bootstrap</span>
+                                <span>JQuery</span>
                             </div>
                         </div>
                     </div>
