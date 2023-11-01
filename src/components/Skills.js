@@ -13,8 +13,8 @@ import phpLogo from '../images/php.png';
 import reactLogo from '../images/react.png';
 import nodeLogo from '../images/node.png';
 import sqlLogo from '../images/sql.png';
-import useWindowSize from './useWindowSize'
-import checkDevice from './checkDevice'
+import useWindowSize from './utilities/useWindowSize'
+import checkDevice from './utilities/checkDevice'
 
 function Skills() {
     const size = useWindowSize();

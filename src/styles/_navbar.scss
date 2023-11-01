@@ -1,0 +1,38 @@
+
+//This is the navigation bar style
+nav {
+    .nav-container {
+        border-radius: 10px;
+        a {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90px;
+        width: 90px;
+    }
+    .navbar {
+        margin: 10px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: 90px;
+        background: $primary-opac;
+        border-radius: 10px;
+    }
+
+    a:hover {
+        background-color: $white;
+        color: $primary;
+        transition: 0.5s;
+    }
+}

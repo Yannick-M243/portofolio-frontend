@@ -1,12 +1,12 @@
 import React from 'react'
-import { useCallback} from "react";
+import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import useWindowSize from './useWindowSize'
-import checkDevice from './checkDevice' 
+import checkDevice from './checkDevice'
 
 function ParticlesComponent() {
-    const size  =useWindowSize();
+    const size = useWindowSize();
     const isMobile = checkDevice(size)
 
     const particlesInit = useCallback(async engine => {

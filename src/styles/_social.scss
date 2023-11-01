@@ -1,0 +1,24 @@
+//this is the social media container style
+.social-media {
+    position: fixed;
+    left: 0;
+    bottom: 50%;
+    background: $primary-opac;
+    width: 50px;
+    border-radius: 0 10px 10px 0;
+    font-size: 1.3em;
+    ul {
+        li {
+            padding: 10px;
+            list-style: none;
+            a {
+                padding: 10px;
+            }
+        }
+    }
+    a:hover {
+        background-color: $white;
+        color: $primary;
+        transition: 0.5s;
+    }
+}

@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMessage, faRectangleXmark } from '@fortawesome/free-regular-svg-icons';
 import successIcon from '../images/success.png';
 import FadeLoader from "react-spinners/FadeLoader";
-import useWindowSize from './useWindowSize'
-import checkDevice from './checkDevice' 
+import useWindowSize from './utilities/useWindowSize'
+import checkDevice from './utilities/checkDevice' 
+import { Slide } from '@mui/material';
 
 function Contact() {
   const size = useWindowSize();
@@ -58,11 +59,13 @@ function Contact() {
     }
   }
 
+
   if (isMobile || isShown) {
     return (
+      <Slide direction="left" in={isShown || isMobile} mountOnEnter unmountOnExit>
       <section id='contact'>
         <div className='exit-box'>
-          <button onClick={showHide} className='message-btn'>
+          <button onClick={showHide} className='exit-btn'>
             <span><FontAwesomeIcon icon={faRectangleXmark} /></span>
           </button>
         </div>
@@ -99,11 +102,12 @@ function Contact() {
                 </div>}
             </div>}
         </div>
-      </section>
+        </section>
+      </Slide>
     )
   } else {
     return (
-      <section id='contact-container'>
+      <section id='contact-button'>
         <button onClick={showHide} className='message-btn'>
           <span><FontAwesomeIcon icon={faMessage} /></span>
         </button>
