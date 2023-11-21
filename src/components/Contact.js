@@ -62,7 +62,7 @@ function Contact() {
 
   if (isShown || isMobile) {
     return (
-      //TODO: Find a way to chande the duration of the transition
+
       <Slide direction="left" in={isShown || isMobile} mountOnEnter unmountOnExit timeout={800} >
       <section id='contact'>
         <div className='exit-box'>
