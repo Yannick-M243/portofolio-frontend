@@ -8,7 +8,7 @@ function Details() {
                         <h2>Details</h2>
                         <div className='container'>
                                 <p><span className="primary-font"><FontAwesomeIcon icon={faHouseFlag} /> Nationality : </span> Congolese</p>
-                                <p><span className="primary-font"><FontAwesomeIcon icon={faMapPin} /> Location : </span> Cape Town, South Africa</p>
+                                <p><span className="primary-font"><FontAwesomeIcon icon={faMapPin} /> Location : </span> Lubumbashi, DR Congo</p>
                                 <p><span className="primary-font"><FontAwesomeIcon icon={faEnvelope} /> Email Address : </span> Yannickmakwenge@gmail.com</p>
                                 <p><span className="primary-font"><FontAwesomeIcon icon={faDumbbell} /> Hobbies : </span> Fitness / Gaming / Anime</p>
                         </div>

@@ -86,7 +86,7 @@ function Education() {
                         <div className='text-container'>
                             <h4>Junior Front-end Developer</h4>
                             <p>Cape Town South Africa</p>
-                            <p className='date'>April 2023 - September 2023</p>
+                            <p className='date'>April 2023 - December 2023</p>
                             <div className='tools'>
                                 <span>Cordova</span>
                                 <span>JavaScript</span>
