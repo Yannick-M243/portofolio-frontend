@@ -7,10 +7,13 @@ import Footer from './Footer'
 import Project from './Project'
 import Contact from './Contact'
 import Socials from './Socials'
+import ModesButtons from './ModesButtons'
+
 
 function Portofolio() {
   return (
     <div>
+      <ModesButtons/>
       <Welcome />
       <Skills />
       <Education />
