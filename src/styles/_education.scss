@@ -97,3 +97,20 @@
         }
     }
 }
+.light {
+    #education {
+        .container {
+            .left-container {
+                .education-cont {
+                    background-color: rgba(128, 128, 128, 0.677);
+                }
+            }
+            .right-container {
+                .exp-container:hover {
+                    box-shadow: 0 10px 10px $grey;
+                    border: solid rgba(128, 128, 128, 0.677) 1px;
+                }
+            }
+        }
+    }
+}

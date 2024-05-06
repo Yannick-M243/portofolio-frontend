@@ -25,9 +25,15 @@ html {
 }
 body {
     font-family: $font-family;
+    overflow-x: hidden;
+}
+.dark {
     background: black;
     color: $white;
-    overflow-x: hidden;
+}
+.light {
+    background: $white;
+    color: black;
 }
 a {
     text-decoration: none;

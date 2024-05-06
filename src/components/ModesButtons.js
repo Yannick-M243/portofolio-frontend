@@ -8,10 +8,11 @@ function ModesButtons(props) {
     
     useEffect(() => {
         if (mode === 'dark') {
-            document.body.style.backgroundColor = 'black';
-            
-            document.body.style.backgroundColor = 'white';
-            document.body.style.color = 'black';
+            document.body.classList.add('dark');
+            document.body.classList.remove('light');
+        }else{
+            document.body.classList.add('light');
+            document.body.classList.remove('dark');
         }
         // eslint-disable-next-line
     }, [])
@@ -19,8 +20,13 @@ function ModesButtons(props) {
     const handleModeButton = () => {
         if (mode === 'dark') {
             setMode('light')
+            document.body.classList.add('light');
+            document.body.classList.remove('dark');
+            
         } else {
             setMode('dark')
+            document.body.classList.add('dark');
+            document.body.classList.remove('light');
         }
     }
 
