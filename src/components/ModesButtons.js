@@ -1,7 +1,7 @@
 import React, { useState,useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon } from '@fortawesome/free-solid-svg-icons'
-import { faSun } from '@fortawesome/free-regular-svg-icons'
+import { faMoon,faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons'
+
 
 function ModesButtons(props) {
     const [mode, setMode] = useState('dark')
@@ -34,7 +34,7 @@ function ModesButtons(props) {
         return (
             <div className='mode-btn-container sun'>
                 <button onClick={handleModeButton}>
-                    <FontAwesomeIcon icon={faSun} />
+                    <FontAwesomeIcon icon={faCircleHalfStroke} />
                 </button>
             </div>
         )

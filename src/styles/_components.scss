@@ -29,7 +29,7 @@ $primary: rgb(30, 143, 255);
 $primary-opac: rgba(30, 143, 255, 0.478);
 $white: rgb(229, 229, 229);
 $white-opac: rgba(255, 255, 255, 0.455);
-$grey:rgb(90, 90, 90);
+$grey: rgb(90, 90, 90);
 
 //font-colors
 .opac-font {
@@ -79,6 +79,7 @@ textarea {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    transition: all ease-in-out 0.2s;
     button {
         display: flex;
         justify-content: center;
@@ -89,19 +90,26 @@ textarea {
         border: 1.5px solid $primary;
         color: $primary;
         font-size: 1.4em;
+        transition: all ease-in-out 0.2s;
     }
     button:hover {
         cursor: pointer;
     }
 }
 .sun {
-    button{
-     background-color: $white;   
+    button {
+        background-color: $white;
+    }
+    button:hover {
+        background-color: black;
     }
 }
 
 .moon {
-    button{
-       background-color: black; 
+    button {
+        background-color: black;
+    }
+    button:hover {
+        background-color: $white;
     }
 }
