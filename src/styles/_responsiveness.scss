@@ -33,6 +33,7 @@
             width: 100% !important;
             border-radius: 50%;
             padding-bottom: 50px;
+            padding-bottom: 80px;
         }
     }
     #experience {
@@ -109,12 +110,19 @@
     #contact {
         @include mobile-margin;
         position: relative !important;
-        background: transparent !important;
+        background: transparent;
         width: 90% !important;
         .exit-box {
             visibility: hidden !important;
         }
         margin: 0 auto !important;
+    }
+    .light{
+        #contact{
+            input,textarea{
+                background: rgba(189, 189, 189, 0.744);
+            }
+    }
     }
     .navbar {
         height: 45px !important;
