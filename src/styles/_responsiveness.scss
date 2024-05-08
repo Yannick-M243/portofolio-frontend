@@ -55,6 +55,7 @@
         justify-content: center;
     }
     .social-media {
+        background-color: $primary-opac-lightMode !important;
         margin-top: 80px;
         padding: 12px 0;
         ul {
@@ -111,7 +112,9 @@
     #contact {
         @include mobile-margin;
         position: relative !important;
-        background: transparent;
+        background: transparent !important {
+            
+        };
         width: 90% !important;
         .exit-box {
             visibility: hidden !important;
@@ -122,6 +125,7 @@
         #contact{
             input,textarea{
                 background: rgba(189, 189, 189, 0.744);
+
             }
     }
     }
