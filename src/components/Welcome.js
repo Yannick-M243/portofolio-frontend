@@ -10,9 +10,9 @@ function Welcome() {
                         <span className='opac-font'>HI, MY NAME IS</span>
                         <h1 className='primary-font'>Yannick Makwenge</h1>
                     </div>
-                    <p>I am a <span className='primary-font'>Software Developer</span>, who seeks to aquire more
-                        knowledge from experienced mentors
-                        and individuals in my fields</p>
+                    <p>I'm a<span className='primary-font'> Software Developer</span> interested in <span className='primary-font'>Digital Transformation</span> and <span className='primary-font'>Data Analysis. </span>
+                        I'm constantly diving into new technologies and eager to collaborate on exciting projects.
+                        Let's connect and create something amazing together!&#128640;</p>
                 </div>
                 <div className='image-container'>
                     <img src={profilePic} alt="profile" />
