@@ -1,14 +1,15 @@
 import React from 'react'
-import { useCallback } from "react";
+import { useCallback  } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import useWindowSize from './useWindowSize'
 import checkDevice from './checkDevice'
 
-function ParticlesComponent() {
+function ParticlesComponent(props) {
+    const color = props.color;
     const size = useWindowSize();
     const isMobile = checkDevice(size)
-
+    
     const particlesInit = useCallback(async engine => {
         //console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -61,10 +62,10 @@ function ParticlesComponent() {
                     },
                     particles: {
                         color: {
-                            value: "rgba(30, 143, 255, 0.478)",
+                            value: color,
                         },
                         links: {
-                            color: "rgba(30, 143, 255, 0.478)",
+                            color: color,
                             distance: 50,
                             enable: true,
                             opacity: 0.8,
@@ -144,10 +145,10 @@ function ParticlesComponent() {
                     },
                     particles: {
                         color: {
-                            value: "rgba(30, 143, 255, 0.478)",
+                            value: color,
                         },
                         links: {
-                            color: "rgba(30, 143, 255, 0.478)",
+                            color: color,
                             distance: 150,
                             enable: true,
                             opacity: 0.8,

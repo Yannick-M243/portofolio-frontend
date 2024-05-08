@@ -100,12 +100,27 @@
 .light {
     #education {
         .container {
+            color: $primary-lightMode;
             .left-container {
+                border-right: 5px solid $primary-lightMode;
                 .education-cont {
                     background-color: rgba(128, 128, 128, 0.677);
                 }
+                  .education-cont:hover {
+                box-shadow: 0 10px 10px $primary-opac-lightMode;
+                border: solid $primary-opac-lightMode 1px;
+            }
             }
             .right-container {
+                border-left: 5px solid $primary-lightMode;
+                .exp-container {
+                    background: $primary-opac-lightMode;
+                    .text-container {
+                        .date {
+                            color: $primary-lightMode;
+                        }
+                    }
+                }
                 .exp-container:hover {
                     box-shadow: 0 10px 10px $grey;
                     border: solid rgba(128, 128, 128, 0.677) 1px;

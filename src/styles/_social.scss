@@ -24,6 +24,9 @@
 }
 .light{
     .social-media{
-        background-color: $primary;
+        background-color: $primary-lightMode;
+    }
+    a:hover {
+        color: $primary-lightMode;
     }
 }

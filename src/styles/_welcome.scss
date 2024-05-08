@@ -41,6 +41,11 @@
                     }
                 }
             }
+            .image-container {
+                img {
+                    border: 10px solid $primary-opac-lightMode;
+                }
+            }
         }
     }
 }

@@ -69,7 +69,19 @@
         .container {
             .repo-card {
                 background-color: rgba(143, 143, 143, 0.275);
+                border: 2px solid $primary-lightMode;
+                .heading-container {
+                    h4 {
+                        color: $primary-lightMode;
+                    }
+                }
+                .card-footer {
+                    background-color: $primary-lightMode;
+                }
             }
+        }
+        .repo-card:hover {
+            box-shadow: 10px 10px $primary-opac-lightMode;
         }
     }
 }

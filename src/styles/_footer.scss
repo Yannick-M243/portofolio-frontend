@@ -51,6 +51,9 @@
 }
 .light{
     #footer {
-    background: $primary;
+    background: $primary-opac-lightMode;
+        .link-container:hover {
+        color: $primary-lightMode;
+    }
     }
 }

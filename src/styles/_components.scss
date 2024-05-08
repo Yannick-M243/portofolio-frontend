@@ -30,6 +30,8 @@ $primary-opac: rgba(30, 143, 255, 0.478);
 $white: rgb(229, 229, 229);
 $white-opac: rgba(255, 255, 255, 0.455);
 $grey: rgb(90, 90, 90);
+$primary-lightMode: rgb(30, 100, 255);
+$primary-opac-lightMode: rgba(30, 100, 255, 0.478);
 
 //font-colors
 .opac-font {
@@ -38,7 +40,11 @@ $grey: rgb(90, 90, 90);
 .primary-font {
     color: $primary;
 }
-
+.light {
+    .primary-font {
+        color: $primary-lightMode;
+    }
+}
 .error {
     color: red;
 }
@@ -47,6 +53,11 @@ $grey: rgb(90, 90, 90);
 }
 .JavaScript {
     color: rgb(240, 219, 79);
+}
+.light {
+    .JavaScript {
+        color: rgb(255, 234, 98);
+    }
 }
 
 .Java {
@@ -96,6 +107,14 @@ textarea {
         cursor: pointer;
     }
 }
+.light {
+    .mode-btn-container {
+        button {
+            border: 1.5px solid $primary-lightMode;
+            color: $primary-lightMode;
+        }
+    }
+}
 .sun {
     button {
         background-color: $white;
@@ -111,5 +130,56 @@ textarea {
     }
     button:hover {
         background-color: $white;
+    }
+}
+
+#contact-button {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: $white;
+    border-radius: 50%;
+
+    .message-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: none;
+        background-color: transparent;
+        font-size: 2em;
+        color: $primary;
+        border: 2px solid $primary;
+    }
+
+    .message-btn:hover {
+        outline: 4px solid $white;
+        background-color: $primary;
+        color: $white;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+.light {
+    #contact-button {
+        .message-btn {
+            color: $primary-lightMode;
+            border: 2px solid $primary-lightMode;
+        }
+        .message-btn:hover {
+            outline: 4px solid $white;
+            background-color: $primary-lightMode;
+            color: $white;
+            transition: 0.5s;
+            cursor: pointer;
+        }
     }
 }

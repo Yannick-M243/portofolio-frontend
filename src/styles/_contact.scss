@@ -107,3 +107,24 @@
         cursor: pointer;
     }
 }
+.light {
+    #contact {
+        background-color: $primary-opac-lightMode;
+        .form-group {
+            textarea:hover {
+                outline: $primary-lightMode 2px solid;
+            }
+            .btn {
+                background-color: $primary-lightMode !important;
+            }
+            .btn:hover {
+                color: $primary-lightMode;
+            }
+        }
+    }
+}
+.exit-box {
+    .exit-btn:hover {
+        color: $primary-lightMode;
+    }
+}
