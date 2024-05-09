@@ -55,7 +55,7 @@
         justify-content: center;
     }
     .social-media {
-        background-color: $primary-opac;
+        background-color: $primary-opac-lightMode !important;
         margin-top: 80px;
         padding: 12px 0;
         ul {
@@ -87,11 +87,6 @@
     }
     #footer {
         margin-top: 0;
-    }
-    .light {
-        .social-media {
-            background-color: $primary-opac-lightMode !important;
-        }
     }
 }
 
@@ -125,10 +120,9 @@
         }
         margin: 0 auto !important;
     }
-    .light {
-        #contact {
-            input,
-            textarea {
+    .light{
+        #contact{
+            input,textarea{
                 background: rgba(189, 189, 189, 0.744);
             }
         }
@@ -160,7 +154,7 @@
     #contact {
         @include mobile-margin;
     }
-        .mode-btn-container {
+    .mode-btn-container {
         top: 6px;
         left: 6px;
     }
