@@ -103,7 +103,6 @@
     }
     #skills {
         @include mobile-margin;
-        width: 89%;
         img {
             margin: 10px !important;
             width: auto !important;
@@ -140,10 +139,6 @@
         font-size: 0.9em !important;
     }
     #home {
-        .container {
-            width: 90% !important;
-        }
-
         img {
             width: 270px !important;
             height: 270px !important;
@@ -153,9 +148,5 @@
     #education,
     #contact {
         @include mobile-margin;
-    }
-    .mode-btn-container {
-        top: 6px;
-        left: 6px;
     }
 }
