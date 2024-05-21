@@ -119,9 +119,10 @@
         }
         margin: 0 auto !important;
     }
-    .light{
-        #contact{
-            input,textarea{
+    .light {
+        #contact {
+            input,
+            textarea {
                 background: rgba(189, 189, 189, 0.744);
             }
         }
@@ -148,5 +149,11 @@
     #education,
     #contact {
         @include mobile-margin;
+    }
+    #details {
+        width: 100% !important;
+        font-size: 1.1em;        .container {
+            width: 90% !important;
+        }
     }
 }
