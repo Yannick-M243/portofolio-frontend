@@ -1,6 +1,6 @@
 import React from 'react';
 import ceLogo from '../images/ce-logo.png';
-import kdaLogo from '../images/kda-logo.webp';
+import kdaLogo from '../images/kda-logo1.svg';
 import babuLogo from '../images/babu-text-logo.png'
 
 function Education() {
