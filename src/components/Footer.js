@@ -10,7 +10,7 @@ function Footer() {
               <div className='link-container'>Download my CV</div>
           </a>
           <div className='outer-footer'>
-              <span className='copyright'>&copy;2023 Copyright <a href="https://github.com/Yannick-M243" target="_blank" rel="noreferrer">Yannick Makwenge.</a></span>
+              <span className='copyright'>&copy;2024 Copyright <a href="https://github.com/Yannick-M243" target="_blank" rel="noreferrer">Yannick Makwenge.</a></span>
           </div>
       </section>
   )
