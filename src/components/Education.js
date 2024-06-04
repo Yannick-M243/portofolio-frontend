@@ -84,7 +84,7 @@ function Education() {
                             < img className='kda-logo logo' src={babuLogo} alt="babu logo" />
                         </div>
                         <div className='text-container'>
-                            <h4>Junior Front-end Developer</h4>
+                            <h4>Front-end Developer</h4>
                             <p>Cape Town South Africa</p>
                             <p className='date'>April 2023 - December 2023</p>
                             <div className='tools'>
