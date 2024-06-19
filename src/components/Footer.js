@@ -1,11 +1,11 @@
 import React from 'react'
-import CV from '../docs/CV-Yannick-Boteti-Makwenge-2023.pdf';
+import CV from '../docs/CV-Yannick-Boteti-Makwenge-2024.pdf';
 
 function Footer() {
   return (
       <section id="footer">
           <p>Want more details?</p>
-          <a href={CV} download="CV-Yannick-Boteti-Makwenge-2023"
+          <a href={CV} download="CV-Yannick-Boteti-Makwenge-2024"
               target="_blank" rel="noreferrer">
               <div className='link-container'>Download my CV</div>
           </a>
