@@ -103,7 +103,7 @@ function Education() {
                         </div>
                         <div className='text-container'>
                             <h4>Digital Transformation Developer Intern</h4>
-                            <p>Lubumbashi</p>
+                            <p>Lubumbashi DR Congo</p>
                             <p className='date'>April 2024 - PRESENT</p>
                             <div className='tools'>
                                 <span>Microsoft Power Apps</span>
