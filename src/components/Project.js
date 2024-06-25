@@ -130,7 +130,7 @@ function Project() {
       <section id="project">
         <h2>Projects</h2>
         <div className='loader-container'>
-          <FadeLoader color="rgba(30, 143, 255, 0.478)" />
+          <FadeLoader color="rgba(30, 143, 255, 0.478)"/>
         </div>
       </section>
     )

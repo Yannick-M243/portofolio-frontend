@@ -2,6 +2,7 @@ import React from 'react';
 import ceLogo from '../images/ce-logo.png';
 import kdaLogo from '../images/kda-logo1.svg';
 import babuLogo from '../images/babu-text-logo.png'
+import aglLogo from '../images/agl_blanc.svg';
 
 function Education() {
     return (
@@ -93,6 +94,23 @@ function Education() {
                                 <span>HTML/CSS</span>
                                 <span>Bootstrap</span>
                                 <span>JQuery</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='exp-container' data-aos="fade-left">
+                        <div className='img-container'>
+                            < img className='kda-logo logo' src={aglLogo} alt="babu logo" />
+                        </div>
+                        <div className='text-container'>
+                            <h4>Digital Transformation Developer Intern</h4>
+                            <p>Lubumbashi</p>
+                            <p className='date'>April 2024 - PRESENT</p>
+                            <div className='tools'>
+                                <span>Microsoft Power Apps</span>
+                                <span>Microsoft Power Automate</span>
+                                <span>Microsoft Power BI</span>
+                                <span>Power Fx</span>
+                                <span>DAX</span>
                             </div>
                         </div>
                     </div>
