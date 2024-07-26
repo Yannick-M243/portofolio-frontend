@@ -3,7 +3,7 @@ import FadeLoader from "react-spinners/FadeLoader";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 
-function Project() {
+function GithubProject() {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
@@ -59,7 +59,7 @@ function Project() {
       //Display a Not found error in case there is no repositories found
       if (repos.message === "Not Found" || repos.length === 0) {
         return (
-          <section id="project">
+          <section id="github-project">
             <div className='container'>
               <p>No repositories found</p>
             </div>
@@ -67,8 +67,9 @@ function Project() {
         )
       } else {
         return (
-          <section id="project">
-            <h2>Projects</h2>
+          <section id="github-project">
+            <h2>Github Projects</h2>
+            <h3>Here are some of my repositories</h3>
             <div className='container'>
               {repos.map(repo => (
                 <div className='repo-card' key={repo.id} data-aos="zoom-in">
@@ -117,8 +118,8 @@ function Project() {
       }
     } else {
       return (
-        <section id="project">
-          <h2>Projects</h2>
+        <section id="github-project">
+          <h2>Github Projects</h2>
           <div className='container'>
             <p className='error pj-error'>There was an error retrieving repositories </p>
           </div>
@@ -127,7 +128,7 @@ function Project() {
     }
   } else {
     return (
-      <section id="project">
+      <section id="github-project">
         <h2>Projects</h2>
         <div className='loader-container'>
           <FadeLoader color="rgba(30, 143, 255, 0.478)"/>
@@ -137,4 +138,4 @@ function Project() {
   }
 }
 
-export default Project;
+export default GithubProject;

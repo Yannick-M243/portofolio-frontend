@@ -102,7 +102,7 @@ function Education() {
                             < img className='kda-logo logo' src={aglLogo} alt="babu logo" />
                         </div>
                         <div className='text-container'>
-                            <h4>Digital Transformation Developer Intern</h4>
+                            <h4>Digital Transformation Developer</h4>
                             <p>Lubumbashi DR Congo</p>
                             <p className='date'>April 2024 - PRESENT</p>
                             <div className='tools'>
