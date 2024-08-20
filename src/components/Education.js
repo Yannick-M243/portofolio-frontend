@@ -82,7 +82,7 @@ function Education() {
                     </div>
                     <div className='exp-container' data-aos="fade-left">
                         <div className='img-container'>
-                            < img className='kda-logo logo' src={babuLogo} alt="babu logo" />
+                            < img className='babu-logo logo' src={babuLogo} alt="babu logo" />
                         </div>
                         <div className='text-container'>
                             <h4>Front-end Developer</h4>
@@ -99,18 +99,22 @@ function Education() {
                     </div>
                     <div className='exp-container' data-aos="fade-left">
                         <div className='img-container'>
-                            < img className='kda-logo logo' src={aglLogo} alt="babu logo" />
+                            < img className='agl-logo logo' src={aglLogo} alt="agl logo" />
                         </div>
                         <div className='text-container'>
-                            <h4>Digital Transformation Developer Intern</h4>
+                            <h4>Digital Transformation Developer</h4>
                             <p>Lubumbashi DR Congo</p>
                             <p className='date'>April 2024 - PRESENT</p>
                             <div className='tools'>
                                 <span>Microsoft Power Apps</span>
-                                <span>Microsoft Power Automate</span>
-                                <span>Microsoft Power BI</span>
+                                <span>Power Automate</span>
+                                <span>Power BI</span>
                                 <span>Power Fx</span>
                                 <span>DAX</span>
+                                <span>.NET</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>HTML/CSS</span>
                             </div>
                         </div>
                     </div>

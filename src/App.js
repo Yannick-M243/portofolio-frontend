@@ -6,7 +6,8 @@ import Skills from '../src/components/Skills'
 import Education from '../src/components/Education'
 import Details from '../src/components/Details'
 import Footer from '../src/components/Footer'
-import Project from '../src/components/Project'
+import GithubProject from './components/GithubProject'
+import Projects from './components/Projects'
 import Contact from '../src/components/Contact'
 import Socials from '../src/components/Socials'
 import ModesButtons from '../src/components/ModesButtons'
@@ -50,7 +51,8 @@ function App() {
       <Welcome />
       <Skills />
       <Education />
-      <Project />
+      <Projects />
+      <GithubProject/>
       <Contact />
       <Details />
       <Socials />
