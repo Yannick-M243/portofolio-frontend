@@ -175,8 +175,9 @@
         }
     }
     #project {
+        @include mobile-margin;
         h5{
-            font-size: .8em;
+            font-size: .7em;
         }
     }
 }
