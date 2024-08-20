@@ -55,7 +55,7 @@
         justify-content: center;
     }
     .social-media {
-        background-color: $primary-opac-lightMode !important;
+        background-color: $primary-opac !important;
         margin-top: 80px;
         padding: 12px 0;
         ul {
@@ -88,11 +88,27 @@
     #footer {
         margin-top: 0;
     }
+    #project {
+        .container {
+            .project-container {
+                .project-slide {
+                    width: 85% ;
+                    height: 83% ;
+                           .img-grid {
+                    img {
+                        aspect-ratio: auto;
+                    }
+                }
+                }
+         
+            }
+        }
+    }
 }
 
 //changing element attributes for screen smaller than 540px to enable responsiveness
-@media screen and (max-width: 540px) {
-    #project {
+@media screen and (max-width: 550px) {
+    #github-project {
         @include mobile-margin;
         margin: 0 auto !important;
         .container {
@@ -126,6 +142,7 @@
                 background: rgba(189, 189, 189, 0.744);
             }
         }
+
     }
     .navbar {
         height: 45px !important;
@@ -152,9 +169,14 @@
     }
     #details {
         width: 100% !important;
-        font-size: 1.1em;        
+        font-size: 1.1em;
         .container {
             width: 90% !important;
+        }
+    }
+    #project {
+        h5{
+            font-size: .8em;
         }
     }
 }

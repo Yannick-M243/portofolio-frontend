@@ -1,21 +1,26 @@
 #project {
-    @include section-css;
+    //@include section-css;
     flex-direction: column;
+    h3 {
+        text-align: center;
+        color: $white-opac;
+        margin: 20px;
+    }
     .container {
         display: flex;
         justify-content: space-around;
         font-size: 1.5em;
-        height: 90%;
-        width: 80%;
+        //height: 90dvh;
+        width: 100%;
         .project-container {
-            height: 100%;
-            width: 100%;
+            //height: fit-content;
+            //width: 94.5%;
             display: flex;
             align-items: center;
             justify-content: center;
             .project-slide {
-                height: 95%;
-                width: 80%;
+                height: 83.5%;
+                width: 70%;
                 background-color: $primary;
                 border-radius: 10px;
                 border: 3px solid $primary;
@@ -35,11 +40,15 @@
                         height: 100%;
                         display: flex;
                         align-items: center;
+                        justify-content: center;
                         padding-right: 1rem;
-                        a{
+                        height: 40px;
+                        width: 40px;
+                        a {
+                            text-align: center;
                             color: $white-opac;
                         }
-                        a:hover{
+                        a:hover {
                             cursor: pointer;
                             color: $white;
                         }
@@ -51,6 +60,8 @@
                     img {
                         height: 100%;
                         width: 100%;
+                        object-fit: contain;
+                        aspect-ratio: 3/2;
                     }
                 }
             }

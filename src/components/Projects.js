@@ -16,7 +16,8 @@ function Projects() {
         <>
             <h2>Projects</h2 >
             <div id='project'>
-            <div className='container'>
+                <h3>These are few projects I have worked on, already in production </h3>
+                <div className='container'>
                     <Swiper
                         className='project-container'
                         modules={[Pagination, Navigation, Autoplay, EffectCards]}
