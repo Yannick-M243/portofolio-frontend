@@ -129,7 +129,7 @@ function GithubProject() {
   } else {
     return (
       <section id="github-project">
-        <h2>Projects</h2>
+        <h2>Github Projects</h2>
         <div className='loader-container'>
           <FadeLoader color="rgba(30, 143, 255, 0.478)"/>
         </div>
