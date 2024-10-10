@@ -13,6 +13,11 @@ import phpLogo from '../images/php.png';
 import reactLogo from '../images/react.png';
 import nodeLogo from '../images/node.png';
 import sqlLogo from '../images/sql.png';
+import powerAppLogo from '../images/power-app.png'
+import powerAutoLogo from '../images/power-automate.png'
+import powerBiLogo from '../images/power-bi.png'
+import powerPlatformLogo from '../images/power-platform.png'
+import supabase from '../images/supabase.png'
 import useWindowSize from './utilities/useWindowSize'
 import checkDevice from './utilities/checkDevice'
 
@@ -39,7 +44,12 @@ function Skills() {
                     <img src={phpLogo} alt="php" className='php' data-aos="zoom-out"></img>
                     <img src={reactLogo} alt="react" data-aos="zoom-out"></img>
                     <img src={nodeLogo} alt="node" data-aos="zoom-out"></img>
-                    <img src={sqlLogo} alt="node" data-aos="zoom-out"></img>
+                    <img src={sqlLogo} alt="sql" data-aos="zoom-out"></img>
+                    <img src={supabase} alt="supabase" data-aos="zoom-out"></img>
+                    <img src={powerAppLogo} alt="power app" data-aos="zoom-out"></img>
+                    <img src={powerAutoLogo} alt="power auto" data-aos="zoom-out"></img>
+                    <img src={powerBiLogo} alt="power bi" data-aos="zoom-out"></img>
+                    <img src={powerPlatformLogo} alt="power plat" data-aos="zoom-out"></img>
                 </div>
             </section>
         );
@@ -62,7 +72,12 @@ function Skills() {
                     <img src={phpLogo} alt="php" className='php' data-aos="flip-left"></img>
                     <img src={reactLogo} alt="react" data-aos="flip-left"></img>
                     <img src={nodeLogo} alt="node" data-aos="flip-left"></img>
-                    <img src={sqlLogo} alt="node" data-aos="flip-left"></img>
+                    <img src={sqlLogo} alt="sql" data-aos="zoom-out"></img>
+                    <img src={supabase} alt="supabase" data-aos="zoom-out"></img>
+                    <img src={powerAppLogo} alt="power app" data-aos="zoom-out"></img>
+                    <img src={powerAutoLogo} alt="power auto" data-aos="zoom-out"></img>
+                    <img src={powerBiLogo} alt="power bi" data-aos="zoom-out"></img>
+                    <img src={powerPlatformLogo} alt="power plat" data-aos="zoom-out"></img>
                 </div>
             </section>
         );
