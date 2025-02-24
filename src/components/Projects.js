@@ -7,6 +7,7 @@ import thebee from '../images/thebee-site.png'
 import galien from '../images/galien-site.png'
 import hangman from '../images/hangman.png'
 import portofolio from '../images/portofolio-site.png'
+import shenimed from "../images/shenimed-screenshot.png"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -50,7 +51,22 @@ function Projects() {
                             </div>
                         </div>
                         <div className='img-grid'>
-                            <img src={galien} alt='project'></img>
+                            <img src={galien} alt='galien'></img>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='project-slide'>
+                        <div className='desc-grid'>
+                            <div className='name'>
+                                <h5>Shenimed official website</h5>
+                            </div>
+                            <div className='link'>
+                                <a href="https://shenimedsarl.com/" target="_blank" rel="noreferrer">
+                                    <span><FontAwesomeIcon icon={faLink} /></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div className='img-grid'>
+                            <img src={shenimed} alt='shenimed'></img>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='project-slide'>
@@ -80,7 +96,7 @@ function Projects() {
                             </div>
                         </div>
                         <div className='img-grid'>
-                            <img src={portofolio} alt='project'></img>
+                            <img src={portofolio} alt='portofolio'></img>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='project-slide'>
